@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competizioni - AC Milan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Impostazione dello sfondo sfocato (solo per lo sfondo, non per il contenuto) */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(45deg, #c71533, #2c2929); /* Gradiente rosso e nero */
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    /* Sfocatura applicata solo allo sfondo (con pseudo-elemento) */
+    .background-blur::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      filter: blur(15px);
+      z-index: -1; /* Posizioniamo il blur dietro gli altri contenuti */
+    }
+
+    /* Hero section con il testo centrato */
+    .hero-section {
+      color: white;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(2, 2, 2, 0.7);
+    }
+
+    .navbar-brand, .nav-link {
+      color: white(196, 36, 36);
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #c8102e;
+    }
+
+
+    /* Card styling */
+    .card {
+      background-color: #c8102e;
+      color: rgb(27, 24, 24);
+    }
+
+    .card:hover {
+      background-color: #9e0027;
+    }
+
+    /* Contenuto del sito */
+    .container {
+      position: relative;
+      z-index: 2; /* Questo assicura che il contenuto sia sopra il blur */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra di navigazione -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AC Milan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="squadra.html">Squadra</a></li>
+          <li class="nav-item"><a class="nav-link" href="stadio.html">Stadio</a></li>
+          <li class="nav-item"><a class="nav-link" href="competizioni.html">Competizioni</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sezione Hero -->
+  <div class="hero-section">
+    <h1>I Trofei del Milan</h1>
+  </div>
+
+  <!-- Dettagli Competizioni -->
+  <div class="container">
+    <h2 class="text-danger text-center">I Trofei del Milan</h2>
+    <p class="lead text-center">L'AC Milan ha vinto numerosi trofei sia a livello nazionale che internazionale.</p>
+    <ul>
+      <li>7 Champions League</li>
+      <li>19 Scudetti</li>
+      <li>5 Coppe Italia</li>
+      <li>7 Supercoppe italiane</li>
+      <li>3 Coppe UEFA</li>
+      <li>1 Coppa Intercontinentale</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>AC Milan &copy; 2024 - Tutti i diritti riservati.</p>
+  </footer>
+
+  <!-- Script JS di Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
